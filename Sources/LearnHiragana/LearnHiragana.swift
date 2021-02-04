@@ -1,65 +1,95 @@
 struct LearnHiragana {
-    var text = Hiragana.あ.rawValue
+    var text: String {
+        [Hiragana]([
+            // Konnichiwa
+            .こ, .ん, .に, .ち, .わ
+        ])
+        .map(\.rawValue)
+        .joined()
+    }
 }
 
 
-enum Hiragana: String {
+public enum Hiragana: String {
     
-    // Vowels
+    // MARK: Vowels
+    
+    
+    /// "aw"
     case あ = "a"
+    /// "ee"
     case い = "i"
+    /// "oo"
     case う = "u"
+    /// "eh"
     case え = "e"
+    /// "oh"
     case お = "o"
     
-    // K
+    // MARK: K
+    
+    
     case か = "ka"
     case き = "ki"
     case く = "ku"
     case け = "ke"
     case こ = "ko"
     
-    // S
+    // MARK: S
+    
+    
     case さ = "sa"
     case し = "shi"
     case す = "su"
     case せ = "se"
     case そ = "so"
     
-    // t
+    // MARK: T
+    
+    
     case た = "ta"
     case ち = "chi"
     case つ = "tsu"
     case て = "te"
     case と = "to"
     
-    // n
+    // MARK: N
+    
+    
     case な = "na"
     case に = "ni"
     case ぬ = "nu"
     case ね = "ne"
     case の = "no"
     
-    // h
+    // MARK: H
+    
+    
     case は = "ha"
     case ひ = "hi"
     case ふ = "fu/hu"
     case へ = "he"
     case ほ = "ho"
     
-    // m
+    // MARK: M
+    
+    
     case ま = "ma"
     case み = "mi"
     case む = "mu"
     case め = "me"
     case も = "mo"
     
-    // y
+    // MARK: Y
+    
+
     case や = "ya"
     case ゆ = "yu"
     case よ = "yo"
     
-    // r
+    // MARK: R
+    
+    
     case ら = "ra"
     case り = "ri"
     case る = "ru"
