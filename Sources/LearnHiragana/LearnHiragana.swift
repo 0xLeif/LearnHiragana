@@ -10,7 +10,7 @@ struct LearnHiragana {
 }
 
 
-public enum Hiragana: String {
+public enum Hiragana: String, CaseIterable {
     
     // MARK: Vowels
     
